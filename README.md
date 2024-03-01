@@ -17,13 +17,12 @@ To further customize the launch file at run-time, refer to the table below.
 
 | Argument | Description | Default Value |
 | -------- | ----------- | :-----------: |
-| robot_model | model type of the Interbotix Turret such as 'wxxms' or 'vxxmd' | "" |
 | robot_name | name of the robot (typically equal to `robot_model`, but could be anything) | "$(arg robot_model)" |
-| base_link_frame | name of the 'root' link on the turret; typically 'base_link', but can be changed if attaching the turret to a mobile base that already has a 'base_link' frame| 'base_link' |
+| base_link_frame | name of the 'root' link; typically 'base_link', but can be changed if attaching to a mobile base that already has a 'base_link' frame| 'base_link' |
 | use_world_frame | set this to true if you would like to load a 'world' frame to the 'robot_description' parameter which is located exactly at the 'base_link' frame of the robot; if using multiple robots or if you would like to attach the 'base_link' frame of the robot to a different frame, set this to false | true |  
 | external_urdf_loc | the file path to the custom urdf.xacro file that you would like to include in the Interbotix robot's urdf.xacro file| "" |
 | use_rviz | launches Rviz | true |
-| motor_configs | the file path to the 'motor config' YAML file | refer to [xsturret_control.launch](launch/xsturret_control.launch) |
-| mode_configs | the file path to the 'mode config' YAML file | refer to [xsturret_control.launch](launch/xsturret_control.launch) |
+| motor_configs | the file path to the 'motor config' YAML file | refer to [aron_control.launch](launch/aron_control.launch) |
+| mode_configs | the file path to the 'mode config' YAML file | refer to [aron_control.launch](launch/aron_control.launch) |
 | load_configs | a boolean that specifies whether or not the initial register values (under the 'motors' heading) in a Motor Config file should be written to the motors; as the values being written are stored in each motor's EEPROM (which means the values are retained even after a power cycle), this can be set to false after the first time using the robot. Setting to false also shortens the node startup time by a few seconds and preserves the life of the EEPROM | true |
 | use_sim | if true, the Dynamixel simulator node is run; use Rviz to visualize the robot's motion; if false, the real Dynamixel driver node is run | false |
