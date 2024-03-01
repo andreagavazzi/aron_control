@@ -2,7 +2,8 @@
 
 ## Structure
 
-<img align="right" src="https://github.com/andreagavazzi/aron_control/blob/main/aron_control.svg"/>  
+<img align="center" src="https://github.com/andreagavazzi/aron_control/blob/main/aron_control.svg"/>  
+
 
 The **aron_control** package builds on top of the [aron_description](../aron_description) and [interbotix_xs_sdk](https://github.com/Interbotix/interbotix_ros_core/tree/main/interbotix_ros_xseries/interbotix_xs_sdk) packages. Please take a look at those packages to get familiar with their nodes. You will also notice a [config](config/) directory a many YAML files. The file (beside the modes.yaml one) specifies the names and initial register values for all the motors that make up a specific Aron model. There is also some 'meta-info' like names of joint groups, the desired joint-topic name and publishing frequency, etc... For a full explanation of each of these parameters, check out the Motor Config file [template](https://github.com/Interbotix/interbotix_ros_core/blob/main/interbotix_ros_xseries/interbotix_xs_sdk/config/motor_configs_template.yaml). The other file located in that directory is the Mode Config one (a.k.a mode.yaml). The parameters in there define the desired operating modes for either a group of joints or single joints, and whether or not they should be torqued on/off at node startup. See more by referencing the Mode Config file [template](https://github.com/Interbotix/interbotix_ros_core/blob/main/interbotix_ros_xseries/interbotix_xs_sdk/config/mode_configs_template.yaml). Typically, the Motor Config file is only defined here while the Mode Config file is also defined in any 'downstream' ROS package. This makes it easy for users to configure their desired motor operating modes depending on their project.
 
