@@ -20,7 +20,7 @@ To further customize the launch file at run-time, refer to the table below.
 | robot_name | name of the robot (typically equal to `robot_model`, but could be anything) | "$(arg robot_model)" |
 | base_link_frame | name of the 'root' link; typically 'base_link', but can be changed if attaching to a mobile base that already has a 'base_link' frame| 'base_link' |
 | use_world_frame | set this to true if you would like to load a 'world' frame to the 'robot_description' parameter which is located exactly at the 'base_link' frame of the robot; if using multiple robots or if you would like to attach the 'base_link' frame of the robot to a different frame, set this to false | true |  
-| external_urdf_loc | the file path to the custom urdf.xacro file that you would like to include in the Interbotix robot's urdf.xacro file| "" |
+| external_urdf_loc | the file path to the custom urdf.xacro file that you would like to include in the robot's urdf.xacro file| "" |
 | use_rviz | launches Rviz | true |
 | motor_configs | the file path to the 'motor config' YAML file | refer to [aron_control.launch](launch/aron_control.launch) |
 | mode_configs | the file path to the 'mode config' YAML file | refer to [aron_control.launch](launch/aron_control.launch) |
